@@ -1,0 +1,55 @@
+{
+  "nb": "NB24",
+  "topic": "Veredito Inicial",
+  "per_domain": {
+    "dcase": {
+      "prot_a": 0.900625,
+      "prot_b": 0.15031250000000002
+    },
+    "mimii": {
+      "prot_a": 0.8228125,
+      "prot_b": 0.46968750000000004
+    },
+    "kaggle": {
+      "prot_a": 0.8771874999999999,
+      "prot_b": 0.19093749999999998
+    }
+  },
+  "dataset": {
+    "n_total": 1260,
+    "n_normal": 960,
+    "n_anomaly": 300,
+    "n_train": 840,
+    "n_train_normal": 640,
+    "n_train_anomaly": 200,
+    "n_test": 420,
+    "n_test_normal": 320,
+    "n_test_anomaly": 100,
+    "machines": [
+      "fan",
+      "pump",
+      "slider",
+      "valve"
+    ],
+    "domains": [
+      "dcase",
+      "kaggle",
+      "mimii"
+    ],
+    "samples_per_domain": {
+      "dcase": 420,
+      "mimii": 420,
+      "kaggle": 420
+    },
+    "samples_per_machine": {
+      "fan": 315,
+      "pump": 315,
+      "slider": 315,
+      "valve": 315
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

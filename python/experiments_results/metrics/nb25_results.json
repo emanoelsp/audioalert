@@ -1,0 +1,54 @@
+{
+  "nb": "NB25",
+  "topic": "Veredito MIMII Multi-SNR",
+  "per_snr": {
+    "snr_-6": {
+      "snr_db": -6,
+      "prot_a": 0.9574074074074074,
+      "prot_b": 0.23055555555555557
+    },
+    "snr_0": {
+      "snr_db": 0,
+      "prot_a": 0.9453703703703703,
+      "prot_b": 0.3907407407407408
+    },
+    "snr_6": {
+      "snr_db": 6,
+      "prot_a": 0.9888888888888888,
+      "prot_b": 0.7083333333333333
+    }
+  },
+  "dataset": {
+    "n_total": 480,
+    "n_normal": 360,
+    "n_anomaly": 120,
+    "n_train": 240,
+    "n_train_normal": 180,
+    "n_train_anomaly": 60,
+    "n_test": 240,
+    "n_test_normal": 180,
+    "n_test_anomaly": 60,
+    "machines": [
+      "fan",
+      "pump",
+      "slider"
+    ],
+    "domains": [
+      "dcase",
+      "mimii"
+    ],
+    "samples_per_domain": {
+      "dcase": 240,
+      "mimii": 240
+    },
+    "samples_per_machine": {
+      "fan": 160,
+      "pump": 160,
+      "slider": 160
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

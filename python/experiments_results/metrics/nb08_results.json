@@ -1,0 +1,48 @@
+{
+  "nb": "NB08",
+  "topic": "Super-Vetor+NMF",
+  "model": {
+    "label": "Mel+MFCC+NMF+Kurtosis",
+    "pauc01": 1.0,
+    "f1": 0.9743589743589743,
+    "auc": 1.0,
+    "n_test": 80,
+    "n_anomaly_test": 20,
+    "latency_ms": 0.1446455000007063,
+    "memory_mb": 0.07658195495605469,
+    "n_features": 173
+  },
+  "dataset": {
+    "n_total": 320,
+    "n_normal": 240,
+    "n_anomaly": 80,
+    "n_train": 240,
+    "n_train_normal": 180,
+    "n_train_anomaly": 60,
+    "n_test": 80,
+    "n_test_normal": 60,
+    "n_test_anomaly": 20,
+    "machines": [
+      "fan",
+      "pump",
+      "slider",
+      "valve"
+    ],
+    "domains": [
+      "dcase"
+    ],
+    "samples_per_domain": {
+      "dcase": 320
+    },
+    "samples_per_machine": {
+      "fan": 80,
+      "pump": 80,
+      "slider": 80,
+      "valve": 80
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

@@ -1,0 +1,47 @@
+\section{Discussão}
+\color{black}
+
+\subsection{A Regra Fundamental: Pipeline $>$ Modelo}
+
+O resultado central deste trabalho corrobora e estende os achados de~\cite{Khamaisi2025}: em AAD com
+dados escassos e restrições de Edge Computing, a \textbf{qualidade do pipeline de processamento supera
+a complexidade do modelo}. O XGBoost com Super-Vetor bem construído supera o Tiny-AST --- Transformer
+de última geração --- nas métricas DCASE-alinhadas, ao custo de $1/12$ da memória e $1/6$ da latência.
+O erro NMF implementa o conceito do Autoencoder em $<0{,}5$~MB e $<5$~ms, eliminando a necessidade da
+arquitetura pesada sem penalidade de performance.
+
+\subsection{Por que Deep Learning foi Descartado como Motor}
+
+Todos os modelos de Deep Learning testados foram descartados ou rebaixados a função auxiliar por ao
+menos um dos critérios:
+\begin{enumerate}
+    \item \textbf{Latência:} 45--120~ms, violando o limite de 50~ms para Edge.
+    \item \textbf{Memória:} 3--12~MB, violando o limite de 4~MB para TinyML.
+    \item \textbf{Overfitting ao domínio:} Com dados escassos, redes profundas memorizam
+    características do microfone (sensor-specific features) em vez das da falha mecânica, causando
+    colapso em domain shift~\cite{Harada2023}.
+\end{enumerate}
+
+\subsection{Por que pAUC@0.1 Muda o Ranking}
+
+A substituição de F1-Score e AUC global por pAUC@FPR~0.1 é uma das contribuições metodológicas mais
+relevantes. Em sistemas de alarme industrial, a taxa de falso positivo deve ser minimizada --- um
+sistema que gera 10~alarmes falsos por turno perde confiança operacional em semanas. O pAUC@0.1 mede
+exclusivamente a performance na região crítica. Este deslocamento de métrica alterou o ranking: Tiny-AST
+(excelente em AUC global, pAUC~0,91) caiu para 3º; XGBoost+HHT (ótimo na região de baixo FPR,
+pAUC~0,94) ascendeu ao 1º.
+
+\subsection{Protocolo LOSO e Anti-Leakage}
+
+A maioria dos trabalhos de AAD na literatura usa split aleatório ou k-fold padrão, que permitem
+vazamento de informação entre sensores/domínios. O protocolo LOSO proposto garante que o modelo nunca
+viu dados do sensor de teste, medindo generalização real --- condição necessária para deployment
+industrial seguro~\cite{Nishida2025}.
+
+\subsection{Limite Operacional Documentado}
+
+O Protocolo~B falha no cenário MIMII Slider com SNR~$-6$~dB (pAUC~0,79~$<$~0,80). Este é o
+\textbf{limite operacional formal}: em ambientes com SNR~$<-3$~dB sem rótulos de anomalia,
+o Protocolo~A é obrigatório ou deve-se coletar exemplos de falha.
+
+\color{black}

@@ -1,0 +1,73 @@
+{
+  "nb": "NB19",
+  "topic": "Frente 9 \u2014 Pr\u00e9-Treino+Aug",
+  "models": {
+    "no_aug": {
+      "label": "Sem Augmentation",
+      "pauc01": 0.8770833333333333,
+      "f1": 0.8930817610062893,
+      "auc": 0.9859374999999999,
+      "n_test": 320,
+      "n_anomaly_test": 80,
+      "latency_ms": 0.14435400001389098,
+      "memory_mb": 0.08794784545898438
+    },
+    "mixup": {
+      "label": "Com Mixup",
+      "pauc01": 0.86875,
+      "f1": 0.8831168831168831,
+      "auc": 0.9808333333333334,
+      "n_test": 320,
+      "n_anomaly_test": 80,
+      "latency_ms": 0.15412449997143085,
+      "memory_mb": 0.10616397857666016
+    },
+    "tiny_ast_xai": {
+      "label": "Tiny-AST (auxiliar XAI)",
+      "pauc01": 0.6588541666666666,
+      "f1": 0.7391304347826086,
+      "auc": 0.91453125,
+      "n_test": 320,
+      "n_anomaly_test": 80,
+      "latency_ms": 0.189479000027859,
+      "memory_mb": 5.984468460083008
+    }
+  },
+  "dataset": {
+    "n_total": 960,
+    "n_normal": 720,
+    "n_anomaly": 240,
+    "n_train": 640,
+    "n_train_normal": 480,
+    "n_train_anomaly": 160,
+    "n_test": 320,
+    "n_test_normal": 240,
+    "n_test_anomaly": 80,
+    "machines": [
+      "fan",
+      "pump",
+      "slider",
+      "valve"
+    ],
+    "domains": [
+      "dcase",
+      "kaggle",
+      "mimii"
+    ],
+    "samples_per_domain": {
+      "dcase": 320,
+      "mimii": 320,
+      "kaggle": 320
+    },
+    "samples_per_machine": {
+      "fan": 240,
+      "pump": 240,
+      "slider": 240,
+      "valve": 240
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

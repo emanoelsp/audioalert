@@ -1,0 +1,69 @@
+{
+  "nb": "NB12",
+  "topic": "Frente 2 \u2014 GMM",
+  "models": {
+    "gmm": {
+      "label": "GMM (k=5)",
+      "pauc01": 0.8657407407407408,
+      "f1": 0.4,
+      "auc": 0.9807407407407408,
+      "n_test": 240,
+      "n_anomaly_test": 60,
+      "latency_ms": 0.1992289999961372,
+      "memory_mb": null
+    },
+    "mahalanobis": {
+      "label": "Mahalanobis",
+      "pauc01": 0.7185185185185186,
+      "f1": 0.4,
+      "auc": 0.9341666666666667,
+      "n_test": 240,
+      "n_anomaly_test": 60,
+      "latency_ms": 0.061875000000100044,
+      "memory_mb": null
+    },
+    "cnn": {
+      "label": "CNN (descartada)",
+      "pauc01": 0.7944444444444445,
+      "f1": 0.864406779661017,
+      "auc": 0.9751851851851852,
+      "n_test": 240,
+      "n_anomaly_test": 60,
+      "latency_ms": 0.11810449999671846,
+      "memory_mb": 1.9648923873901367
+    }
+  },
+  "dataset": {
+    "n_total": 480,
+    "n_normal": 360,
+    "n_anomaly": 120,
+    "n_train": 240,
+    "n_train_normal": 180,
+    "n_train_anomaly": 60,
+    "n_test": 240,
+    "n_test_normal": 180,
+    "n_test_anomaly": 60,
+    "machines": [
+      "fan",
+      "pump",
+      "slider"
+    ],
+    "domains": [
+      "dcase",
+      "mimii"
+    ],
+    "samples_per_domain": {
+      "dcase": 240,
+      "mimii": 240
+    },
+    "samples_per_machine": {
+      "fan": 160,
+      "pump": 160,
+      "slider": 160
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "nb": "NB04",
+  "topic": "Mel-Spectrogram",
+  "model": {
+    "label": "MEL",
+    "pauc01": 1.0,
+    "f1": 1.0,
+    "auc": 1.0,
+    "n_test": 33,
+    "n_anomaly_test": 8,
+    "latency_ms": 0.1554999999999751,
+    "memory_mb": 0.07216739654541016,
+    "extraction_latency_ms": 2.067500000000777
+  },
+  "extraction_ms": 2.067500000000777,
+  "dataset": {
+    "n_total": 130,
+    "n_normal": 100,
+    "n_anomaly": 30,
+    "n_train": 97,
+    "n_train_normal": 75,
+    "n_train_anomaly": 22,
+    "n_test": 33,
+    "n_test_normal": 25,
+    "n_test_anomaly": 8,
+    "machines": [
+      "fan",
+      "pump"
+    ],
+    "domains": [
+      "dcase"
+    ],
+    "samples_per_domain": {
+      "dcase": 130
+    },
+    "samples_per_machine": {
+      "fan": 65,
+      "pump": 65
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "nb": "NB21",
+  "topic": "Frente 11 \u2014 Consolida\u00e7\u00e3o",
+  "per_domain": {
+    "dcase": {
+      "prot_a": 0.8056249999999999,
+      "prot_b": 0.0006250000000000006,
+      "dcase_score": 0.40312499999999996
+    },
+    "mimii": {
+      "prot_a": 0.86,
+      "prot_b": 0.004687500000000002,
+      "dcase_score": 0.43234374999999997
+    },
+    "kaggle": {
+      "prot_a": 0.8862500000000001,
+      "prot_b": 0.14843750000000003,
+      "dcase_score": 0.5173437500000001
+    },
+    "drive": {
+      "prot_a": 0.203125,
+      "prot_b": 0.51125,
+      "dcase_score": 0.3571875
+    }
+  },
+  "avg_prot_a": 0.68875,
+  "avg_prot_b": 0.16625,
+  "avg_dcase_score": 0.42750000000000005,
+  "dataset": {
+    "n_total": 1680,
+    "n_normal": 1280,
+    "n_anomaly": 400,
+    "n_train": 1260,
+    "n_train_normal": 960,
+    "n_train_anomaly": 300,
+    "n_test": 420,
+    "n_test_normal": 320,
+    "n_test_anomaly": 100,
+    "machines": [
+      "fan",
+      "pump",
+      "slider",
+      "valve"
+    ],
+    "domains": [
+      "dcase",
+      "drive",
+      "kaggle",
+      "mimii"
+    ],
+    "samples_per_domain": {
+      "dcase": 420,
+      "mimii": 420,
+      "kaggle": 420,
+      "drive": 420
+    },
+    "samples_per_machine": {
+      "fan": 420,
+      "pump": 420,
+      "slider": 420,
+      "valve": 420
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "nb": "NB20",
+  "topic": "Frente 10 \u2014 XAI",
+  "model": {
+    "label": "model",
+    "pauc01": 1.0,
+    "f1": 0.8571428571428571,
+    "auc": 1.0,
+    "n_test": 33,
+    "n_anomaly_test": 8,
+    "latency_ms": 0.14370799999596784,
+    "memory_mb": 0.07456684112548828
+  },
+  "hotspots": [
+    {
+      "rank": 1,
+      "time_s": 1.088,
+      "intensity": 0.9999999935627697
+    },
+    {
+      "rank": 2,
+      "time_s": 0.496,
+      "intensity": 0.9549802142741601
+    },
+    {
+      "rank": 3,
+      "time_s": 0.912,
+      "intensity": 0.9419865792972714
+    }
+  ],
+  "band_activations": {
+    "low": 0.950713223568795,
+    "mid": 0.04091501314869948,
+    "high": 0.00837176328249837
+  },
+  "dataset": {
+    "n_total": 130,
+    "n_normal": 100,
+    "n_anomaly": 30,
+    "n_train": 97,
+    "n_train_normal": 75,
+    "n_train_anomaly": 22,
+    "n_test": 33,
+    "n_test_normal": 25,
+    "n_test_anomaly": 8,
+    "machines": [
+      "fan",
+      "slider"
+    ],
+    "domains": [
+      "dcase"
+    ],
+    "samples_per_domain": {
+      "dcase": 130
+    },
+    "samples_per_machine": {
+      "fan": 65,
+      "slider": 65
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

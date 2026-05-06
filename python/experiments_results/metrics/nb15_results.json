@@ -1,0 +1,56 @@
+{
+  "nb": "NB15",
+  "topic": "Frente 5 \u2014 pAUC@0.1",
+  "ranking": {
+    "XGBoost": {
+      "pauc01": 0.9151041666666667,
+      "f1": 0.9212121212121213,
+      "auc": 0.9892187499999999
+    },
+    "Tiny-AST": {
+      "pauc01": 0.7463541666666668,
+      "f1": 0.8053691275167785,
+      "auc": 0.9422395833333335
+    },
+    "GMM": {
+      "pauc01": 0.4630208333333333,
+      "f1": 0.4,
+      "auc": 0.8918229166666667
+    }
+  },
+  "dataset": {
+    "n_total": 640,
+    "n_normal": 480,
+    "n_anomaly": 160,
+    "n_train": 320,
+    "n_train_normal": 240,
+    "n_train_anomaly": 80,
+    "n_test": 320,
+    "n_test_normal": 240,
+    "n_test_anomaly": 80,
+    "machines": [
+      "fan",
+      "pump",
+      "slider",
+      "valve"
+    ],
+    "domains": [
+      "dcase",
+      "mimii"
+    ],
+    "samples_per_domain": {
+      "dcase": 320,
+      "mimii": 320
+    },
+    "samples_per_machine": {
+      "fan": 160,
+      "pump": 160,
+      "slider": 160,
+      "valve": 160
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

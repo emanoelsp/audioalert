@@ -1,0 +1,43 @@
+\color{black}
+
+\section{Conclusão}
+
+Este trabalho apresentou, implementou e validou a arquitetura \textbf{DIAMOND CRISTAL CLEAN} --- uma
+pipeline evolutiva dual para Detecção Acústica de Anomalias em ambientes industriais, comprovadamente
+viável para Edge Computing e TinyML. A metodologia baseada em 28~experimentos com quatro fases de
+desenvolvimento produziu seis achados principais:
+
+\begin{enumerate}
+    \item \textbf{HHT+UKF é o componente mais crítico:} Sua remoção custa $-7$~p.p. de pAUC@0.1 e
+    causa domain shift catastrófico --- resultado inédito na literatura de AAD por ablation formal.
+
+    \item \textbf{Modelo dual é necessário:} Um único modelo não cobre adequadamente os dois regimes
+    operacionais. Protocolo~A (XGBoost, pAUC~0,94) e Protocolo~B (GMM+Gamma, pAUC~0,88) são
+    complementares e ambos DCASE-Ready.
+
+    \item \textbf{pAUC@0.1 muda o ranking:} F1-Score e AUC global não são métricas adequadas para
+    sistemas de alarme industrial. A adoção do pAUC@FPR~0.1 é recomendação desta pesquisa para a
+    comunidade de AAD~\cite{Nishida2025}.
+
+    \item \textbf{Deep Learning é auxiliar, não motor:} CNN, LSTM-AE e Tiny-AST são inviáveis como
+    motores de inferência em Edge. O Tiny-AST tem valor exclusivo como gerador de embeddings para XAI
+    em análise offline (Cloud).
+
+    \item \textbf{Descarte documentado é contribuição:} O registro formal de 10~técnicas descartadas
+    com justificativa quantitativa (pAUC, latência, memória) contribui para a comunidade ao mapear o
+    espaço de soluções inviáveis --- informação raramente publicada na literatura~\cite{Khamaisi2025}.
+
+    \item \textbf{XAI com diagnóstico físico:} A camada XAI transforma o score de anomalia em
+    evidência física interpretável (hotspots temporais, faixas espectrais, mecanismo provável),
+    tornando o sistema auditável para equipes de manutenção~\cite{Ali2025, Zamorano2025}.
+\end{enumerate}
+
+O sistema atende plenamente aos três critérios de Edge Computing: pAUC@0.1~$>$~0,80, latência~$<$~50~ms
+e memória~$<$~4~MB. O limite operacional documentado --- Protocolo~B falha com SNR~$<-3$~dB sem rótulos
+--- fornece diretriz clara para deployment industrial.
+
+Como trabalho futuro, a submissão formal ao DCASE~2025 Task~2 consolidará o posicionamento da
+arquitetura no estado da arte internacional, e a integração com firmware de microcontrolador ARM
+Cortex-M validará o Cenário~3 em hardware embarcado real~\cite{Uzel2026}.
+
+\color{black}

@@ -1,0 +1,64 @@
+{
+  "nb": "NB13",
+  "topic": "Frente 3 \u2014 HHT+UKF",
+  "models": {
+    "raw": {
+      "label": "Sem HHT+UKF",
+      "pauc01": 0.9192708333333334,
+      "f1": 0.9182389937106918,
+      "auc": 0.9846354166666668,
+      "n_test": 320,
+      "n_anomaly_test": 80,
+      "latency_ms": 0.21495850000263772,
+      "memory_mb": 0.07865524291992188
+    },
+    "hht": {
+      "label": "Com HHT+UKF",
+      "pauc01": 0.9666666666666668,
+      "f1": 0.9493670886075949,
+      "auc": 0.9966666666666667,
+      "n_test": 320,
+      "n_anomaly_test": 80,
+      "latency_ms": 0.195708000006789,
+      "memory_mb": 0.07807540893554688,
+      "snr_gain_db": 0.8064267163835985
+    }
+  },
+  "snr_gain_db": 0.8064267163835985,
+  "pauc_gain": 0.047395833333333415,
+  "dataset": {
+    "n_total": 640,
+    "n_normal": 480,
+    "n_anomaly": 160,
+    "n_train": 320,
+    "n_train_normal": 240,
+    "n_train_anomaly": 80,
+    "n_test": 320,
+    "n_test_normal": 240,
+    "n_test_anomaly": 80,
+    "machines": [
+      "fan",
+      "pump",
+      "slider",
+      "valve"
+    ],
+    "domains": [
+      "dcase",
+      "mimii"
+    ],
+    "samples_per_domain": {
+      "dcase": 320,
+      "mimii": 320
+    },
+    "samples_per_machine": {
+      "fan": 160,
+      "pump": 160,
+      "slider": 160,
+      "valve": 160
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

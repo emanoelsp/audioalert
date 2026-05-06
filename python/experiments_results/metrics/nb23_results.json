@@ -1,0 +1,59 @@
+{
+  "nb": "NB23",
+  "topic": "Champion Clean",
+  "protocol_a": {
+    "label": "model",
+    "pauc01": 0.9471874999999998,
+    "f1": 0.9278350515463918,
+    "auc": 0.9936562499999999,
+    "n_test": 420,
+    "n_anomaly_test": 100,
+    "latency_ms": 0.14452049992996763,
+    "memory_mb": 0.09645748138427734
+  },
+  "protocol_b": {
+    "label": "model",
+    "pauc01": 0.37125,
+    "f1": 0.38461538461538464,
+    "auc": 0.86071875,
+    "n_test": 420,
+    "n_anomaly_test": 100,
+    "latency_ms": 0.21083300009649975,
+    "memory_mb": null
+  },
+  "dataset": {
+    "n_total": 840,
+    "n_normal": 640,
+    "n_anomaly": 200,
+    "n_train": 420,
+    "n_train_normal": 320,
+    "n_train_anomaly": 100,
+    "n_test": 420,
+    "n_test_normal": 320,
+    "n_test_anomaly": 100,
+    "machines": [
+      "fan",
+      "pump",
+      "slider",
+      "valve"
+    ],
+    "domains": [
+      "dcase",
+      "mimii"
+    ],
+    "samples_per_domain": {
+      "dcase": 420,
+      "mimii": 420
+    },
+    "samples_per_machine": {
+      "fan": 210,
+      "pump": 210,
+      "slider": 210,
+      "valve": 210
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

@@ -1,0 +1,58 @@
+\section{Introdução}
+
+\color{black}
+
+No paradigma da Indústria~4.0, a manutenção preditiva consolida-se como pilar estratégico para a
+mitigação de custos operacionais e a erradicação de interrupções não programadas na linha de
+produção~\cite{Khamaisi2025, Le2025}. Entre as modalidades de Monitoramento de Condição, a análise
+de sinais acústicos aéreos --- Detecção Acústica de Anomalias (AAD) --- emerge como fronteira
+tecnológica de alto impacto: abordagem não intrusiva, de baixo custo de instalação e compatível com
+dispositivos IoT~\cite{Zhang2026, Uzel2026}. Contudo, a viabilidade prática em ambientes fabris é
+desafiada pela natureza não-estacionária dos sinais e pela contaminação por ruído de fundo contínuo,
+que frequentemente mascara falhas mecânicas em estágio incipiente~\cite{Bi2026, Ali2025}.
+
+A estratégia investigada neste trabalho estabelece uma trajetória de validação técnica focada na
+convergência entre o processamento em Nuvem (Cloud) e a eficiência exigida pela Borda
+(Edge)~\cite{Uzel2026}. O escopo define a AAD em chão de fábrica por meio de topologia Fog/Edge
+Computing, integrada a um ecossistema de monitoramento web. Para assegurar robustez dos modelos,
+desenvolveu-se uma Prova de Conceito estruturada em \textbf{Pipeline de Camadas Acumulativas},
+evoluída ao longo de 28~experimentos incrementais. O protocolo de benchmarking foi rigorosamente
+alinhado ao desafio DCASE~2025 Task~2~\cite{Nishida2025}, garantindo comparabilidade com o estado da
+arte internacional e prevenindo data leakage via isolamento por fonte~\cite{Harada2023, Dohi2022}.
+
+\subsection{Contribuições Principais}
+
+O presente trabalho aporta seis contribuições originais à literatura de AAD:
+
+\begin{enumerate}
+    \item \textbf{Pipeline HHT+UKF como Pré-Processador Essencial:} Comprovação
+    quantitativa, via ablation study, de que a decomposição por HHT e filtragem UKF é o
+    componente de maior impacto isolado da arquitetura ($-7$~p.p. em pAUC@0.1 quando removido),
+    com ganho de $+5{,}7$~dB de SNR~\cite{Zamorano2025}.
+
+    \item \textbf{Arquitetura Dual de Decisão (Protocolo A/B):} Proposição e validação de
+    dois protocolos complementares que cobrem os dois regimes operacionais do DCASE~2025:
+    Protocolo~A supervisionado (XGBoost+Mixup, pAUC~0,94) e Protocolo~B não supervisionado
+    (GMM+Gamma, pAUC~0,88)~\cite{Emon2025, Jiang2025}.
+
+    \item \textbf{Viabilidade Comprovada para Edge/TinyML:} Validação quantitativa de que
+    modelos estatísticos leves superam arquiteturas de Deep Learning (CNN, LSTM-AE, Tiny-AST)
+    em eficiência para Edge sem penalidade relevante em pAUC@0.1, com latências de 15--20~ms
+    e footprint $<1$~MB~\cite{Khamaisi2025}.
+
+    \item \textbf{Análise Crítica das Técnicas Descartadas:} Registro formal e
+    quantitativo de 10~técnicas descartadas por violação dos critérios pAUC@0.1~$>$~0,80,
+    latência~$<$~50~ms e memória~$<$~4~MB --- contribuição metodológica rara na literatura
+    de AAD.
+
+    \item \textbf{XAI com Diagnóstico Físico Acionável:} Camada de explicabilidade que
+    traduz o score de anomalia em hotspots temporais, distribuição espectral por faixa e
+    mecanismo físico provável, tornando o sistema auditável para equipes de
+    manutenção~\cite{Ali2025}.
+
+    \item \textbf{Avaliação Multi-Fonte com Protocolo LOSO:} Validação sob protocolo
+    Leave-One-Source-Out com quatro fontes de dados (DCASE~2025, MIMII, Kaggle Bearings,
+    áudios próprios), incluindo cenário adversarial de domain shift severo~\cite{Harada2023}.
+\end{enumerate}
+
+\color{black}

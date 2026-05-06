@@ -1,0 +1,35 @@
+\section{Trabalhos Relacionados}
+
+\color{black}
+
+Trabalhos recentes demonstram a superioridade de abordagens baseadas em IA sobre análise clássica de
+sinais em ambientes ruidosos. Na vertente supervisionada, \cite{Le2025} propuseram modelos avaliados nas
+bases MIMII e DCASE usando características de alta frequência (Espectrogramas de Mel e MFCCs) combinadas
+a XGBoost e GRU, com resultados expressivos em ambientes industriais complexos. Corroborando a
+aplicabilidade no chão de fábrica, \cite{Uzel2026} aplicaram CNNs leves sobre espectrogramas de Mel para
+diagnóstico de motores elétricos, demonstrando latências na casa dos milissegundos em dispositivos de
+borda.
+
+No regime não supervisionado, o desafio central reside no \textit{Domain Shift} e na escassez de amostras
+anômalas --- o paradigma \textit{First-Shot} do DCASE~2025~\cite{Nishida2025}. \cite{Bi2026} integram
+aprimoramento espectral e \textit{Frequency-Gated Attention} para lidar com a ausência de amostras de
+falha. Soluções competitivas do DCASE~2025 priorizam otimização contrastiva latente e modelagem
+adversarial para robustecer fronteiras de decisão frente a variações operacionais~\cite{Jiang2025,
+Emon2025}. O alinhamento ao protocolo \textit{First-Shot} do DCASE~2025 foi estabelecido por
+\cite{Harada2023} como referência formal de generalização cross-domain.
+
+Para contornar o peso computacional do Deep Learning, modelos leves e DSP ganham notoriedade.
+\cite{Zamorano2025} atestaram a Transformada Wavelet de Pacote (WPT) para identificação de transientes
+mecânicos ultracurtos. \cite{Ali2025} utilizaram PCA acoplada a Autoencoders Adversariais para acelerar
+a detecção em séries temporais multivariadas. \cite{Zhang2026} introduziram o Tiny-AST, modelo compacto
+($\sim$1M parâmetros) de alta performance em condições adversas de ruído. Num estudo de referência para
+Edge Computing, \cite{Khamaisi2025} validaram em hidrelétricas reais que modelos estatísticos rasos
+(K-Means, OC-SVM, Distância de Mahalanobis) atingem o melhor balanço entre tempo de treinamento e
+precisão (AUC~$>$~0,96) quando alicerçados por engenharia de características refinada.
+
+\textbf{Lacuna identificada:} A literatura carece de um estudo que: (a)~documente formalmente e
+quantifique \textit{o que foi descartado} e \textit{por que}; (b)~proponha uma arquitetura dual
+supervisionada/não-supervisionada com decisão limiar estatisticamente fundamentada; e
+(c)~valide com múltiplas fontes e métricas DCASE-alinhadas. Este trabalho preenche essa lacuna.
+
+\color{black}

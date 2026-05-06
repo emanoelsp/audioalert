@@ -1,0 +1,71 @@
+{
+  "nb": "NB18",
+  "topic": "Frente 8 \u2014 Arena N\u00e3o Sup",
+  "models": {
+    "gmm": {
+      "label": "GMM (k=5)",
+      "pauc01": 0.6223214285714286,
+      "f1": 0.36363636363636365,
+      "auc": 0.8874107142857143,
+      "n_test": 360,
+      "n_anomaly_test": 80,
+      "latency_ms": 0.2412494999930459,
+      "memory_mb": null
+    },
+    "mahalanobis": {
+      "label": "Mahalanobis",
+      "pauc01": 0.5589285714285713,
+      "f1": 0.36363636363636365,
+      "auc": 0.8600892857142858,
+      "n_test": 360,
+      "n_anomaly_test": 80,
+      "latency_ms": 0.19370850003497253,
+      "memory_mb": null
+    },
+    "isolation_forest": {
+      "label": "Isolation Forest",
+      "pauc01": 0.41026785714285713,
+      "f1": 0.0,
+      "auc": 0.9009821428571428,
+      "n_test": 360,
+      "n_anomaly_test": 80,
+      "latency_ms": 3.403687999991689,
+      "memory_mb": 1.2559728622436523
+    }
+  },
+  "dataset": {
+    "n_total": 720,
+    "n_normal": 560,
+    "n_anomaly": 160,
+    "n_train": 360,
+    "n_train_normal": 280,
+    "n_train_anomaly": 80,
+    "n_test": 360,
+    "n_test_normal": 280,
+    "n_test_anomaly": 80,
+    "machines": [
+      "fan",
+      "pump",
+      "slider",
+      "valve"
+    ],
+    "domains": [
+      "dcase",
+      "mimii"
+    ],
+    "samples_per_domain": {
+      "dcase": 360,
+      "mimii": 360
+    },
+    "samples_per_machine": {
+      "fan": 180,
+      "pump": 180,
+      "slider": 180,
+      "valve": 180
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

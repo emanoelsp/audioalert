@@ -1,0 +1,45 @@
+{
+  "nb": "NB05",
+  "topic": "CWT",
+  "model": {
+    "label": "CWT",
+    "pauc01": 0.7000000000000001,
+    "f1": 0.8888888888888888,
+    "auc": 0.9700000000000001,
+    "n_test": 33,
+    "n_anomaly_test": 8,
+    "latency_ms": 0.16306300000223928,
+    "memory_mb": 0.07349681854248047,
+    "extraction_latency_ms": 188.19491699999702
+  },
+  "extraction_ms": 188.19491699999702,
+  "dataset": {
+    "n_total": 130,
+    "n_normal": 100,
+    "n_anomaly": 30,
+    "n_train": 97,
+    "n_train_normal": 75,
+    "n_train_anomaly": 22,
+    "n_test": 33,
+    "n_test_normal": 25,
+    "n_test_anomaly": 8,
+    "machines": [
+      "fan",
+      "pump"
+    ],
+    "domains": [
+      "dcase"
+    ],
+    "samples_per_domain": {
+      "dcase": 130
+    },
+    "samples_per_machine": {
+      "fan": 65,
+      "pump": 65
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

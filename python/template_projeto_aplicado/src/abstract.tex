@@ -1,0 +1,28 @@
+\color{black}
+
+\begin{abstract}
+A manutenção preditiva baseada em áudio na Indústria~4.0 enfrenta desafios críticos impostos pela natureza
+não-estacionária dos sinais acústicos e pelo elevado ruído de fundo em ambientes fabris. Este trabalho
+propõe, implementa e valida uma \textbf{arquitetura evolutiva dual} para a Detecção Acústica de Anomalias
+(AAD), concebida especificamente para ecossistemas de Fog e Edge Computing. A metodologia fundamentou-se
+em 28~experimentos estruturados em quatro fases --- Exploração (NB~1--10), Otimização (NB~11--15),
+Validação (NB~16--21) e Confrontamento (NB~22--28) --- com benchmarking rigoroso alinhado ao protocolo
+DCASE~2025 Task~2 (\textit{First-Shot Unsupervised Anomalous Sound Detection}). O pipeline resultante,
+denominado \textbf{DIAMOND CRISTAL CLEAN}, integra: (1)~pré-processamento por Transformada de
+Hilbert-Huang com Filtro Unscented de Kalman (HHT+UKF), com ganho de $+5{,}7$~dB de SNR; (2)~extração
+de Super-Vetor híbrido de $\sim\!100$ dimensões (Mel-Spectrogram, MFCC, erro NMF, Kurtosis e energia por
+banda); e (3)~camada decisória dual --- XGBoost com Mixup para o regime supervisionado e GMM com limiar
+via distribuição Gamma para o regime não supervisionado. Os resultados revelam pAUC@0.1 de 0,94 no
+Protocolo~A (supervisionado) e 0,88 no Protocolo~B (não supervisionado), com latências de 15~ms e 20~ms,
+respectivamente, e footprint de memória inferior a 1~MB --- confirmando viabilidade plena para TinyML.
+A camada de Inteligência Artificial Explicável (XAI) transforma o score de anomalia em diagnóstico físico
+acionável com localização temporal e espectral. Validação multi-fonte com protocolo LOSO
+(\textit{Leave-One-Source-Out}) sobre DCASE~2025, MIMII (SNR de $-6$ a $+6$~dB), Kaggle Bearings e
+áudios próprios demonstra robustez cross-domain e posicionamento competitivo em relação ao estado da
+arte internacional.
+\end{abstract}
+
+\noindent \textbf{Palavras-chave:} Detecção Acústica de Anomalias, Edge Computing, TinyML, Processamento
+Digital de Sinais, DCASE~2025, pAUC@0.1, HHT+UKF, XGBoost, GMM, XAI.
+
+\color{black}

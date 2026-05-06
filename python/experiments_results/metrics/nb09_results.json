@@ -1,0 +1,43 @@
+{
+  "nb": "NB09",
+  "topic": "Kaggle Bearings",
+  "model": {
+    "label": "XGBoost cross-domain",
+    "pauc01": 1.0,
+    "f1": 1.0,
+    "auc": 1.0,
+    "n_test": 65,
+    "n_anomaly_test": 15,
+    "latency_ms": 0.27710399999136825,
+    "memory_mb": 0.07061290740966797
+  },
+  "dataset": {
+    "n_total": 130,
+    "n_normal": 100,
+    "n_anomaly": 30,
+    "n_train": 65,
+    "n_train_normal": 50,
+    "n_train_anomaly": 15,
+    "n_test": 65,
+    "n_test_normal": 50,
+    "n_test_anomaly": 15,
+    "machines": [
+      "slider"
+    ],
+    "domains": [
+      "dcase",
+      "kaggle"
+    ],
+    "samples_per_domain": {
+      "dcase": 65,
+      "kaggle": 65
+    },
+    "samples_per_machine": {
+      "slider": 130
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

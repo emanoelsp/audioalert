@@ -1,0 +1,81 @@
+{
+  "nb": "NB03",
+  "topic": "Baseline Real",
+  "models": {
+    "xgboost": {
+      "label": "XGBoost",
+      "pauc01": 0.8916666666666667,
+      "f1": 0.9147286821705426,
+      "auc": 0.9891666666666666,
+      "n_test": 260,
+      "n_anomaly_test": 60,
+      "latency_ms": 0.18987450000018669,
+      "memory_mb": 0.07502365112304688
+    },
+    "gru": {
+      "label": "GRU proxy",
+      "pauc01": 0.38249999999999995,
+      "f1": 0.5319148936170213,
+      "auc": 0.8539166666666665,
+      "n_test": 260,
+      "n_anomaly_test": 60,
+      "latency_ms": 0.06666650000042296,
+      "memory_mb": 0.7047863006591797
+    },
+    "lstm_ae": {
+      "label": "LSTM-AE",
+      "pauc01": 0.57,
+      "f1": 0.375,
+      "auc": 0.7909166666666667,
+      "n_test": 260,
+      "n_anomaly_test": 60,
+      "latency_ms": 0.20839549999962514,
+      "memory_mb": null
+    },
+    "tiny_ast": {
+      "label": "Tiny-AST",
+      "pauc01": 0.7608333333333334,
+      "f1": 0.8,
+      "auc": 0.9499166666666667,
+      "n_test": 260,
+      "n_anomaly_test": 60,
+      "latency_ms": 0.17274999999994378,
+      "memory_mb": 5.984628677368164
+    }
+  },
+  "dataset": {
+    "n_total": 520,
+    "n_normal": 400,
+    "n_anomaly": 120,
+    "n_train": 260,
+    "n_train_normal": 200,
+    "n_train_anomaly": 60,
+    "n_test": 260,
+    "n_test_normal": 200,
+    "n_test_anomaly": 60,
+    "machines": [
+      "fan",
+      "pump",
+      "slider",
+      "valve"
+    ],
+    "domains": [
+      "dcase",
+      "mimii"
+    ],
+    "samples_per_domain": {
+      "dcase": 260,
+      "mimii": 260
+    },
+    "samples_per_machine": {
+      "fan": 130,
+      "pump": 130,
+      "slider": 130,
+      "valve": 130
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

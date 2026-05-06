@@ -1,0 +1,64 @@
+{
+  "nb": "NB14",
+  "topic": "Frente 4 \u2014 Mixup",
+  "models": {
+    "no_mixup": {
+      "label": "Sem Mixup",
+      "pauc01": 0.05885416666666667,
+      "f1": 0.4020100502512563,
+      "auc": 0.5344270833333333,
+      "n_test": 320,
+      "n_anomaly_test": 80,
+      "latency_ms": 0.1561455000000933,
+      "memory_mb": 0.09281635284423828
+    },
+    "mixup": {
+      "label": "Com Mixup (\u03b1=0.4)",
+      "pauc01": 0.04427083333333333,
+      "f1": 0.4020100502512563,
+      "auc": 0.6360937500000001,
+      "n_test": 320,
+      "n_anomaly_test": 80,
+      "latency_ms": 0.1490415000091616,
+      "memory_mb": 0.1070709228515625
+    }
+  },
+  "pauc_gain": -0.014583333333333344,
+  "dataset": {
+    "n_total": 960,
+    "n_normal": 720,
+    "n_anomaly": 240,
+    "n_train": 640,
+    "n_train_normal": 480,
+    "n_train_anomaly": 160,
+    "n_test": 320,
+    "n_test_normal": 240,
+    "n_test_anomaly": 80,
+    "machines": [
+      "fan",
+      "pump",
+      "slider",
+      "valve"
+    ],
+    "domains": [
+      "dcase",
+      "drive",
+      "mimii"
+    ],
+    "samples_per_domain": {
+      "dcase": 320,
+      "mimii": 320,
+      "drive": 320
+    },
+    "samples_per_machine": {
+      "fan": 240,
+      "pump": 240,
+      "slider": 240,
+      "valve": 240
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "nb": "NB11",
+  "topic": "Frente 1 \u2014 L2+Gamma",
+  "models": {
+    "lambda_0.0": {
+      "label": "\u03bb=0.0",
+      "pauc01": 0.825,
+      "f1": 0.8533333333333334,
+      "auc": 0.9825,
+      "n_test": 160,
+      "n_anomaly_test": 40,
+      "latency_ms": 0.2146664999926884,
+      "memory_mb": 0.07308197021484375
+    },
+    "lambda_0.1": {
+      "label": "\u03bb=0.1",
+      "pauc01": 0.8583333333333334,
+      "f1": 0.8974358974358975,
+      "auc": 0.9858333333333333,
+      "n_test": 160,
+      "n_anomaly_test": 40,
+      "latency_ms": 0.2618124999997917,
+      "memory_mb": 0.07186412811279297
+    },
+    "lambda_1.0": {
+      "label": "\u03bb=1.0",
+      "pauc01": 0.8479166666666667,
+      "f1": 0.821917808219178,
+      "auc": 0.9847916666666667,
+      "n_test": 160,
+      "n_anomaly_test": 40,
+      "latency_ms": 0.2068960000016773,
+      "memory_mb": 0.0722341537475586
+    }
+  },
+  "gamma_threshold": 0.17522902938024226,
+  "dataset": {
+    "n_total": 320,
+    "n_normal": 240,
+    "n_anomaly": 80,
+    "n_train": 160,
+    "n_train_normal": 120,
+    "n_train_anomaly": 40,
+    "n_test": 160,
+    "n_test_normal": 120,
+    "n_test_anomaly": 40,
+    "machines": [
+      "fan",
+      "pump"
+    ],
+    "domains": [
+      "dcase",
+      "mimii"
+    ],
+    "samples_per_domain": {
+      "dcase": 160,
+      "mimii": 160
+    },
+    "samples_per_machine": {
+      "fan": 160,
+      "pump": 160
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

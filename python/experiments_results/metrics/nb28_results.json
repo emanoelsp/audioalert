@@ -1,0 +1,95 @@
+{
+  "nb": "NB28",
+  "topic": "DIAMOND CRISTAL CLEAN Final",
+  "spec": {
+    "architecture": "DIAMOND CRISTAL CLEAN",
+    "hyperparams": {
+      "hht_n_imfs": 4,
+      "hht_n_sifting": 8,
+      "ukf_obs_var": 0.05,
+      "mel_bins": 64,
+      "mfcc_n": 13,
+      "nmf_components": 8,
+      "xgb_n_estimators": 100,
+      "xgb_max_depth": 3,
+      "xgb_lambda": 1.0,
+      "mixup_alpha": 0.4,
+      "gmm_components": 5,
+      "gamma_fpr_target": 0.05
+    },
+    "avg_prot_a": 0.7227343749999999,
+    "avg_prot_b": 0.18562500000000004,
+    "avg_dcase_score": 0.45417968750000004,
+    "avg_latency_ms_a": 0.218661375015472,
+    "avg_memory_mb_a": 0.11028671264648438,
+    "per_domain": {
+      "dcase": {
+        "prot_a_pauc": 0.8740625,
+        "prot_b_pauc": 0.084375,
+        "dcase_score": 0.47921874999999997,
+        "latency_ms_a": 0.13827099996888137,
+        "memory_mb_a": 0.11064529418945312
+      },
+      "mimii": {
+        "prot_a_pauc": 0.84125,
+        "prot_b_pauc": 0.123125,
+        "dcase_score": 0.48218750000000005,
+        "latency_ms_a": 0.16708300017853617,
+        "memory_mb_a": 0.11109733581542969
+      },
+      "kaggle": {
+        "prot_a_pauc": 0.84,
+        "prot_b_pauc": 0.15156250000000002,
+        "dcase_score": 0.49578125,
+        "latency_ms_a": 0.4194584998913342,
+        "memory_mb_a": 0.11103439331054688
+      },
+      "drive": {
+        "prot_a_pauc": 0.335625,
+        "prot_b_pauc": 0.3834375000000001,
+        "dcase_score": 0.3595312500000001,
+        "latency_ms_a": 0.14983300002313626,
+        "memory_mb_a": 0.10836982727050781
+      }
+    }
+  },
+  "dataset": {
+    "n_total": 1680,
+    "n_normal": 1280,
+    "n_anomaly": 400,
+    "n_train": 1260,
+    "n_train_normal": 960,
+    "n_train_anomaly": 300,
+    "n_test": 420,
+    "n_test_normal": 320,
+    "n_test_anomaly": 100,
+    "machines": [
+      "fan",
+      "pump",
+      "slider",
+      "valve"
+    ],
+    "domains": [
+      "dcase",
+      "drive",
+      "kaggle",
+      "mimii"
+    ],
+    "samples_per_domain": {
+      "dcase": 420,
+      "mimii": 420,
+      "kaggle": 420,
+      "drive": 420
+    },
+    "samples_per_machine": {
+      "fan": 420,
+      "pump": 420,
+      "slider": 420,
+      "valve": 420
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

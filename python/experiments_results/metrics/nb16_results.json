@@ -1,0 +1,60 @@
+{
+  "nb": "NB16",
+  "topic": "Frente 6 \u2014 Gamma FPR",
+  "thresholds": {
+    "fpr_0.01": {
+      "fpr_target": 0.01,
+      "threshold": 33382838.70502997,
+      "pauc01": 0.36875,
+      "f1": 0.38461538461538464
+    },
+    "fpr_0.05": {
+      "fpr_target": 0.05,
+      "threshold": 26115920.178372856,
+      "pauc01": 0.36875,
+      "f1": 0.5203252032520326
+    },
+    "fpr_0.1": {
+      "fpr_target": 0.1,
+      "threshold": 22690948.328071535,
+      "pauc01": 0.36875,
+      "f1": 0.5033112582781457
+    }
+  },
+  "pauc01": 0.36875,
+  "dataset": {
+    "n_total": 720,
+    "n_normal": 560,
+    "n_anomaly": 160,
+    "n_train": 360,
+    "n_train_normal": 280,
+    "n_train_anomaly": 80,
+    "n_test": 360,
+    "n_test_normal": 280,
+    "n_test_anomaly": 80,
+    "machines": [
+      "fan",
+      "pump",
+      "slider",
+      "valve"
+    ],
+    "domains": [
+      "dcase",
+      "mimii"
+    ],
+    "samples_per_domain": {
+      "dcase": 360,
+      "mimii": 360
+    },
+    "samples_per_machine": {
+      "fan": 180,
+      "pump": 180,
+      "slider": 180,
+      "valve": 180
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

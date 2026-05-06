@@ -1,0 +1,59 @@
+{
+  "nb": "NB22",
+  "topic": "Arquitetura Campe\u00e3",
+  "protocol_a": {
+    "label": "Protocolo A \u2014 DIAMOND CRISTAL CLEAN",
+    "pauc01": 0.9471875000000002,
+    "f1": 0.9326424870466321,
+    "auc": 0.9943437500000001,
+    "n_test": 420,
+    "n_anomaly_test": 100,
+    "latency_ms": 0.14535449997765681,
+    "memory_mb": 0.09581184387207031
+  },
+  "protocol_b": {
+    "label": "Protocolo B \u2014 DIAMOND CRISTAL CLEAN",
+    "pauc01": 0.593125,
+    "f1": 0.38461538461538464,
+    "auc": 0.8986250000000001,
+    "n_test": 420,
+    "n_anomaly_test": 100,
+    "latency_ms": 0.21679150000863956,
+    "memory_mb": null
+  },
+  "dataset": {
+    "n_total": 840,
+    "n_normal": 640,
+    "n_anomaly": 200,
+    "n_train": 420,
+    "n_train_normal": 320,
+    "n_train_anomaly": 100,
+    "n_test": 420,
+    "n_test_normal": 320,
+    "n_test_anomaly": 100,
+    "machines": [
+      "fan",
+      "pump",
+      "slider",
+      "valve"
+    ],
+    "domains": [
+      "dcase",
+      "mimii"
+    ],
+    "samples_per_domain": {
+      "dcase": 420,
+      "mimii": 420
+    },
+    "samples_per_machine": {
+      "fan": 210,
+      "pump": 210,
+      "slider": 210,
+      "valve": 210
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

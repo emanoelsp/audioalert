@@ -1,0 +1,45 @@
+{
+  "nb": "NB06",
+  "topic": "STFT",
+  "model": {
+    "label": "STFT",
+    "pauc01": 0.7749999999999999,
+    "f1": 0.5454545454545454,
+    "auc": 0.975,
+    "n_test": 33,
+    "n_anomaly_test": 8,
+    "latency_ms": 0.20114549999661335,
+    "memory_mb": 0.07210254669189453,
+    "extraction_latency_ms": 0.40174999999464944
+  },
+  "extraction_ms": 0.40174999999464944,
+  "dataset": {
+    "n_total": 130,
+    "n_normal": 100,
+    "n_anomaly": 30,
+    "n_train": 97,
+    "n_train_normal": 75,
+    "n_train_anomaly": 22,
+    "n_test": 33,
+    "n_test_normal": 25,
+    "n_test_anomaly": 8,
+    "machines": [
+      "fan",
+      "pump"
+    ],
+    "domains": [
+      "dcase"
+    ],
+    "samples_per_domain": {
+      "dcase": 130
+    },
+    "samples_per_machine": {
+      "fan": 65,
+      "pump": 65
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

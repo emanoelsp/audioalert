@@ -1,0 +1,46 @@
+{
+  "nb": "NB07",
+  "topic": "H\u00edbrido v1",
+  "model": {
+    "label": "Mel+MFCC+CWT",
+    "pauc01": 0.9760765550239234,
+    "f1": 0.9090909090909091,
+    "auc": 0.9976076555023924,
+    "n_test": 49,
+    "n_anomaly_test": 11,
+    "latency_ms": 0.15377049999898418,
+    "memory_mb": 0.07184505462646484,
+    "n_features": 204
+  },
+  "dataset": {
+    "n_total": 195,
+    "n_normal": 150,
+    "n_anomaly": 45,
+    "n_train": 146,
+    "n_train_normal": 112,
+    "n_train_anomaly": 34,
+    "n_test": 49,
+    "n_test_normal": 38,
+    "n_test_anomaly": 11,
+    "machines": [
+      "fan",
+      "pump",
+      "slider"
+    ],
+    "domains": [
+      "dcase"
+    ],
+    "samples_per_domain": {
+      "dcase": 195
+    },
+    "samples_per_machine": {
+      "fan": 65,
+      "pump": 65,
+      "slider": 65
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

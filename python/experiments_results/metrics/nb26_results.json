@@ -1,0 +1,60 @@
+{
+  "nb": "NB26",
+  "topic": "S\u00edntese da Evolu\u00e7\u00e3o",
+  "pauc_per_nb": {
+    "nb01": 1.0,
+    "nb02": 0.8666666666666668,
+    "nb03": 0.8916666666666667,
+    "nb04": 1.0,
+    "nb05": 0.7000000000000001,
+    "nb06": 0.7749999999999999,
+    "nb07": 0.9760765550239234,
+    "nb08": 1.0,
+    "nb09": 1.0,
+    "nb10": 0.09750000000000002,
+    "nb11": 0.8583333333333334,
+    "nb12": 0.8657407407407408,
+    "nb13": 0.9666666666666668,
+    "nb14": 0.05885416666666667,
+    "nb15": 0.9151041666666667,
+    "nb16": 0.36875,
+    "nb17": 0.2546875,
+    "nb18": 0.6223214285714286,
+    "nb19": 0.8770833333333333,
+    "nb20": 1.0,
+    "nb21": 0.68875
+  },
+  "dataset": {
+    "n_total": 480,
+    "n_normal": 360,
+    "n_anomaly": 120,
+    "n_train": 240,
+    "n_train_normal": 180,
+    "n_train_anomaly": 60,
+    "n_test": 240,
+    "n_test_normal": 180,
+    "n_test_anomaly": 60,
+    "machines": [
+      "fan",
+      "pump",
+      "slider"
+    ],
+    "domains": [
+      "dcase",
+      "mimii"
+    ],
+    "samples_per_domain": {
+      "dcase": 240,
+      "mimii": 240
+    },
+    "samples_per_machine": {
+      "fan": 160,
+      "pump": 160,
+      "slider": 160
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

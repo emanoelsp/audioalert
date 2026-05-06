@@ -1,0 +1,53 @@
+{
+  "nb": "NB10",
+  "topic": "Drive Pr\u00f3prio Domain Shift",
+  "model": {
+    "label": "XGBoost (Drive - blind)",
+    "pauc01": 0.09750000000000002,
+    "f1": 0.3761755485893417,
+    "auc": 0.633,
+    "n_test": 260,
+    "n_anomaly_test": 60,
+    "latency_ms": 0.23556249999501233,
+    "memory_mb": 0.08943939208984375,
+    "pauc01_controlled": 1.0
+  },
+  "domain_shift_drop": 0.9025,
+  "dataset": {
+    "n_total": 780,
+    "n_normal": 600,
+    "n_anomaly": 180,
+    "n_train": 520,
+    "n_train_normal": 400,
+    "n_train_anomaly": 120,
+    "n_test": 260,
+    "n_test_normal": 200,
+    "n_test_anomaly": 60,
+    "machines": [
+      "fan",
+      "pump",
+      "slider",
+      "valve"
+    ],
+    "domains": [
+      "dcase",
+      "drive",
+      "mimii"
+    ],
+    "samples_per_domain": {
+      "dcase": 260,
+      "mimii": 260,
+      "drive": 260
+    },
+    "samples_per_machine": {
+      "fan": 195,
+      "pump": 195,
+      "slider": 195,
+      "valve": 195
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

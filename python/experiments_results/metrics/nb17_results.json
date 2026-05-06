@@ -1,0 +1,63 @@
+{
+  "nb": "NB17",
+  "topic": "Frente 7 \u2014 Protocolos A/B",
+  "models": {
+    "protocol_a": {
+      "label": "Protocolo A (XGBoost)",
+      "pauc01": 0.09609375,
+      "f1": 0.4,
+      "auc": 0.6363281249999999,
+      "n_test": 320,
+      "n_anomaly_test": 80,
+      "latency_ms": 0.15989599998533777,
+      "memory_mb": 0.10473060607910156
+    },
+    "protocol_b": {
+      "label": "Protocolo B (GMM+OutlierExp)",
+      "pauc01": 0.2546875,
+      "f1": 0.4,
+      "auc": 0.8340624999999999,
+      "n_test": 320,
+      "n_anomaly_test": 80,
+      "latency_ms": 0.21177050001597308,
+      "memory_mb": null
+    }
+  },
+  "dataset": {
+    "n_total": 960,
+    "n_normal": 720,
+    "n_anomaly": 240,
+    "n_train": 640,
+    "n_train_normal": 480,
+    "n_train_anomaly": 160,
+    "n_test": 320,
+    "n_test_normal": 240,
+    "n_test_anomaly": 80,
+    "machines": [
+      "fan",
+      "pump",
+      "slider",
+      "valve"
+    ],
+    "domains": [
+      "dcase",
+      "drive",
+      "mimii"
+    ],
+    "samples_per_domain": {
+      "dcase": 320,
+      "mimii": 320,
+      "drive": 320
+    },
+    "samples_per_machine": {
+      "fan": 240,
+      "pump": 240,
+      "slider": 240,
+      "valve": 240
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

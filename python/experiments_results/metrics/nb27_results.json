@@ -1,0 +1,70 @@
+{
+  "nb": "NB27",
+  "topic": "Ablation Study",
+  "ablation": {
+    "Refer\u00eancia (completo)": {
+      "pauc01": 0.9637500000000001,
+      "delta": 0.0
+    },
+    "Sem HHT+UKF": {
+      "pauc01": 0.9675,
+      "delta": -0.00374999999999992
+    },
+    "Sem MFCC": {
+      "pauc01": 0.9571875,
+      "delta": 0.006562500000000138
+    },
+    "Sem NMF": {
+      "pauc01": 0.9637500000000001,
+      "delta": 0.0
+    },
+    "Sem Mixup": {
+      "pauc01": 0.983125,
+      "delta": -0.01937499999999992
+    },
+    "Sem Kurtosis": {
+      "pauc01": 0.9709375,
+      "delta": -0.007187499999999902
+    },
+    "Sem L2": {
+      "pauc01": 0.9759375,
+      "delta": -0.012187499999999907
+    }
+  },
+  "pauc_full": 0.9637500000000001,
+  "dataset": {
+    "n_total": 840,
+    "n_normal": 640,
+    "n_anomaly": 200,
+    "n_train": 420,
+    "n_train_normal": 320,
+    "n_train_anomaly": 100,
+    "n_test": 420,
+    "n_test_normal": 320,
+    "n_test_anomaly": 100,
+    "machines": [
+      "fan",
+      "pump",
+      "slider",
+      "valve"
+    ],
+    "domains": [
+      "dcase",
+      "mimii"
+    ],
+    "samples_per_domain": {
+      "dcase": 420,
+      "mimii": 420
+    },
+    "samples_per_machine": {
+      "fan": 210,
+      "pump": 210,
+      "slider": 210,
+      "valve": 210
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}

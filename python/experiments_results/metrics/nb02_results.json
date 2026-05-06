@@ -1,0 +1,55 @@
+{
+  "nb": "NB02",
+  "topic": "N\u00e3o Supervisionado",
+  "models": {
+    "autoencoder": {
+      "label": "Autoencoder",
+      "pauc01": 0.8666666666666668,
+      "f1": 0.4,
+      "auc": 0.9833333333333334,
+      "n_test": 40,
+      "n_anomaly_test": 10,
+      "latency_ms": 0.19008350000015994,
+      "memory_mb": null
+    },
+    "isolation_forest": {
+      "label": "Isolation Forest",
+      "pauc01": 0.33333333333333337,
+      "f1": 0.0,
+      "auc": 0.8899999999999999,
+      "n_test": 40,
+      "n_anomaly_test": 10,
+      "latency_ms": 3.761228999999755,
+      "memory_mb": 0.7066898345947266
+    }
+  },
+  "dataset": {
+    "n_total": 160,
+    "n_normal": 120,
+    "n_anomaly": 40,
+    "n_train": 120,
+    "n_train_normal": 90,
+    "n_train_anomaly": 30,
+    "n_test": 40,
+    "n_test_normal": 30,
+    "n_test_anomaly": 10,
+    "machines": [
+      "fan",
+      "pump"
+    ],
+    "domains": [
+      "dcase"
+    ],
+    "samples_per_domain": {
+      "dcase": 160
+    },
+    "samples_per_machine": {
+      "fan": 80,
+      "pump": 80
+    },
+    "signal_length_samples": 32000,
+    "signal_duration_s": 2.0,
+    "sample_rate_hz": 16000,
+    "source": "synthetic (sinusoidal+harmonics+pink_noise+fault_signature)"
+  }
+}
